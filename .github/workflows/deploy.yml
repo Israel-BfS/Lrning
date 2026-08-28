@@ -1,0 +1,17 @@
+name: Deploy to Local Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Copy files to Web Server directory
+        run: |
+          cp -r * /var/www/app1/
