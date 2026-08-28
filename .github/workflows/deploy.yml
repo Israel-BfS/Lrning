@@ -1,4 +1,4 @@
-name: Deploy to Local Server
+name: Deploy with Docker
 
 on:
   push:
@@ -12,6 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Copy files to Web Server directory
+      - name: Build and Deploy Docker Container
         run: |
-          cp -r * /var/www/app1/
+          docker compose down || true
+          docker compose up --build -d
