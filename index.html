@@ -14,8 +14,8 @@
     <section class="header">
         <nav>
             <a href="index.html"><img src="images/thelogo.png"></a>
-            <div class="nav-links">
-                <i class="fa fa-times-circle"></i>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle" onclick="hidemenu()"></i>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html">About</a></li>
@@ -24,7 +24,7 @@
                         <li><a href="index.html">Contact</a></li>
                     </ul>
             </div>
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
         </nav>
         <div class="text-box">
             <h1>World's Biggest University </h1>
@@ -33,6 +33,49 @@
         </div>
     </section>
 
+    <!------ Course ------>  
+
+<section class="course">
+    <h1>Courses We Offer</h1>
+    <p>Lorem ipsum dolor sit amet, conectetur adipiscing elit.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Intermediate</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque aliquet turpis nulla, eleifend faucibus est
+            sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus
+            Donec sit.</p>
+        </div>
+        <div class="course-col">
+            <h3>Degree</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque aliquet turpis nulla, eleifend faucibus est
+            sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus
+            Donec sit.</p>
+        </div>
+        <div class="course-col">
+            <h3>Post Graduation</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque aliquet turpis nulla, eleifend faucibus est
+            sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus
+            Donec sit.</p>
+        </div>
+    </div>
+</section>
+
+    <!------JavaSCript for Toggle Menu------>
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showmenu(){
+            navLinks.style.right = "0";
+        }
+        function hidemenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
     
 </body>
 </html>
