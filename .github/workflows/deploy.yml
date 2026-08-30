@@ -14,5 +14,5 @@ jobs:
 
       - name: Build and Deploy Docker Container
         run: |
-          docker compose down || true
-          docker compose up --build -d
+          docker compose down --remove-orphans || true
+          docker compose up --build -d --remove-orphans
