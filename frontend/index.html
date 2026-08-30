@@ -1,62 +1,81 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Stack App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .card {
-            background: #1e1e1e;
-            border-radius: 8px;
-            padding: 24px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
-        }
-        button {
-            background-color: #007acc;
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        button:hover {
-            background-color: #005999;
-        }
-        pre {
-            background: #2d2d2d;
-            padding: 12px;
-            border-radius: 4px;
-            overflow-x: auto;
-        }
-        li { margin: 8px 0; }
-    </style>
+    <title>University Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/fontawesome.min.css">
 </head>
 <body>
-    <div class="card">
-        <h2>Panel Full-Stack</h2>
-        <p>Frontend (Nginx) comunicándose con Backend (Node.js API)</p>
-        <button id="btnFetch">Consultar API</button>
-    </div>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/thelogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle" onclick="hidemenu()"></i>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="index.html">Courses</a></li>
+                        <li><a href="index.html">Blog</a></li>
+                        <li><a href="index.html">Contact</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>World's Biggest University </h1>
+            <p>Explore our wide range of programs and join a community of learners.</p>
+            <a href="" class="hero-btn">Visit Us to Know More</a>
+        </div>
+    </section>
 
-    <div class="card">
-        <h3>Respuesta del Backend:</h3>
-        <pre id="apiStatus">Haz clic en "Consultar API" para cargar datos...</pre>
-        <ul id="taskList"></ul>
-    </div>
+    <!------ Course ------>  
 
-    <script src="app.js"></script>
+<section class="course">
+    <h1>Courses We Offer</h1>
+    <p>Lorem ipsum dolor sit amet, conectetur adipiscing elit.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Intermediate</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque aliquet turpis nulla, eleifend faucibus est
+            sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus
+            Donec sit.</p>
+        </div>
+        <div class="course-col">
+            <h3>Degree</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque aliquet turpis nulla, eleifend faucibus est
+            sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus
+            Donec sit.</p>
+        </div>
+        <div class="course-col">
+            <h3>Post Graduation</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque aliquet turpis nulla, eleifend faucibus est
+            sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus
+            Donec sit.</p>
+        </div>
+    </div>
+</section>
+
+    <!------JavaSCript for Toggle Menu------>
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showmenu(){
+            navLinks.style.right = "0";
+        }
+        function hidemenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+    
 </body>
 </html>
